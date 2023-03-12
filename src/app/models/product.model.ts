@@ -5,7 +5,7 @@ export interface ProductModel {
   readonly ratingValue: string;
   readonly ratingCount: string;
   readonly imageUrl: string;
-  readonly featureValues: string;
+  readonly featureValues: number;
   readonly storeIds: string[];
   readonly id: string;
 }

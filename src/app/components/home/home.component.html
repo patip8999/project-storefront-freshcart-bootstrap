@@ -11,29 +11,105 @@
     </li>
   </ul>
 </div>
+
+<section class="my-lg-14 my-8">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="mb-8">
+          <h3 class="mb-0">Shop by Category</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xxl-4 g-6">
+      <div *ngFor="let item of categoriesList$ | async" class="col">
+        <a
+          [routerLink]="'/categories/' + item.id"
+          class="text-decoration-none text-inherit"
+        >
+          <div class="card card-product">
+            <div class="card-body text-center py-8">
+              <img [src]="item.imageUrl" [alt]="item.name" class="mb-3" />
+
+              <div class="text-truncate">{{ item.name }}</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="my-lg-14 my-8">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="mb-8">
+            <h3 class="mb-0">Stores</h3>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xxl-4 g-6">
+        <div *ngFor="let item of storeList$ | async" class="col">
+          <a
+            [routerLink]="'/categories/' + item.id"
+            class="text-decoration-none text-inherit"
+          >
+            <div class="card card-product">
+              <div class="card-body text-center py-8">
+                <img [src]="item.logoUrl" [alt]="item.name" class="mb-3" />
+  
+                <div class="text-truncate">{{ item.name }}</div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 <footer class="footer">
   <div class="container">
     <div class="row g-4">
       <div class="col-12 col-md-12 col-lg-4">
         <div class="row g-4">
-          <div class="col-12"><h6 class="mb-4"> Categories
-
-          </h6></div>
-          <ul class="navbar-nav "><li *ngFor="let item of categoriesList$ | async" class="nav-item"><a class="nav-link" [routerLink]="'categories/:staegoryId'" role="button">{{item.name}}</a></li></ul>
-            
+          <div class="col-12"><h6 class="mb-4">Categories</h6></div>
+          <ul class="navbar-nav">
+            <li *ngFor="let item of categoriesList$ | async" class="nav-item">
+              <a
+                class="nav-link"
+                [routerLink]="'/categories/' + item.id"
+                role="button"
+                >{{ item.name }}</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
       <div class="col-12 col-md-12 col-lg-4">
         <div class="row g-4 pb-4">
           <div class="col-12"><h6 class="mb-4">Stores</h6></div>
         </div>
-        <ul class="navbar-nav "><li *ngFor="let item of storeList$ | async" class="nav-item"><a class="nav-link" [routerLink]="'stores/:storeId'" role="button">{{item.name}}</a></li></ul>
+        <ul class="navbar-nav">
+          <li *ngFor="let item of storeList$ | async" class="nav-item">
+            <a
+              class="nav-link"
+              [routerLink]="'stores/' + item.id"
+              role="button"
+              >{{ item.name }}</a
+            >
+          </li>
+        </ul>
       </div>
       <div class="col-12 col-md-12 col-lg-4">
         <div class="row g-4">
           <div class="col-12"><h6 class="mb-4">Get to know us</h6></div>
         </div>
-        <ul class="navbar-nav "><li *ngFor="let item of GetToKnowUs$ | async" class="nav-item"><a class="nav-link" [routerLink]="item" role="button">{{item}}</a></li></ul>
+        <ul class="navbar-nav">
+          <li *ngFor="let item of GetToKnowUs$ | async" class="nav-item">
+            <a class="nav-link" [routerLink]="item" role="button">{{ item }}</a>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="border-top py-4">

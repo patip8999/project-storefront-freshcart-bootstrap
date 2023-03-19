@@ -296,4 +296,5 @@ readonly numberOfPages$: Observable<number[]> = combineLatest([
       this.sortCheckboxForm.addControl(storeId, new FormControl(false))
     );
   }
+  
 }

@@ -72,7 +72,114 @@
           <div class="d-block">
             <ul class="navbar-nav">
        
-  
+              <nav class="button">
+                <!-- Container wrapper -->
+                <div class="container-fluid">
+                  <!-- Toggle button -->
+                  <button class="navbar-toggler px-0" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarExampleOnHover" aria-controls="navbarExampleOnHover" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                  </button>
+              
+               
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto ps-lg-0" style="padding-left: 0.15rem">
+                
+                      <!-- Navbar dropdown -->
+                      <li class="nav-item dropdown dropdown-hover position-static">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                          data-mdb-toggle="dropdown" aria-expanded="false">
+                          Mega menu
+                        </a>
+                        <!-- Dropdown menu -->
+                        <div class="dropdown-menu w-100 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;
+                                          border-top-right-radius: 0;
+                                        ">
+              
+                          <div class="container">
+                            <div class="row my-4">
+                              <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                <div class="list-group list-group-flush">
+                                  <p class="mb-0 list-group-item text-uppercase font-weight-bold  text-primary ps-3">
+                                    Dairy, Bread & Eggs
+                                  </p>
+                                  <a href="" class="list-group-item list-group-item-action">Butter</a>
+                                  <a href="" class="list-group-item list-group-item-action">Milk Drinks</a>
+                                  <a href="" class="list-group-item list-group-item-action">Curd & Yogurt</a>
+                                  <a href="" class="list-group-item list-group-item-action">Eggs</a>
+                                  <a href="" class="list-group-item list-group-item-action">Buns & Bakery</a>
+                                  <a href="" class="list-group-item list-group-item-action">Cheese</a>
+                                  <a href="" class="list-group-item list-group-item-action">Condensed Milk</a>
+                                  <a href="" class="list-group-item list-group-item-action">Dairy Products</a>
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                <div class="list-group list-group-flush">
+                             
+                                  <p class="mb-0 list-group-item text-uppercase font-weight-bold  text-primary ps-3">
+                                    Breakfast & Instant Food
+                                  </p>
+                                  <a href="" class="list-group-item list-group-item-action">Breakfast Cereal</a>
+                                  <a href="" class="list-group-item list-group-item-action">Noodles, Pasta & Soup</a>
+                                  <a href="" class="list-group-item list-group-item-action">Frozen Veg Snacks</a>
+                                  <a href="" class="list-group-item list-group-item-action">Vermicelli</a>
+                                  <a href="" class="list-group-item list-group-item-action">Instant Mixes</a>
+                                  <a href="" class="list-group-item list-group-item-action">Batter</a>
+                                  <a href="" class="list-group-item list-group-item-action">Fruit and Juices</a>
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                                <div class="list-group list-group-flush">
+                                    
+                                  <p class="mb-0 list-group-item text-uppercase font-weight-bold text-primary ps-3">
+                                    Cold Drinks & Juices
+                                  </p>
+                              
+                                  <a href="" class="list-group-item list-group-item-action">Soft Drinks</a>
+                                  <a href="" class="list-group-item list-group-item-action">Fruit Juices</a>
+                                  <a href="" class="list-group-item list-group-item-action">Coldpress</a>
+                                  <a href="" class="list-group-item list-group-item-action">Water & Mixers</a>
+                                  <a href="" class="list-group-item list-group-item-action">Health Drinks</a>
+                                  <a href="" class="list-group-item list-group-item-action">Herbal Drinks</a>
+                                  <a href="" class="list-group-item list-group-item-action">Milk Drinks</a>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-12 mb-4 mb-lg-0">
+                                <div class="card border-0">
+                                  <img
+                                    src="assets/images/banner/menu-banner.jpg"
+                                    alt="eCommerce HTML Template"
+                                    class="img-fluid"
+                                  />
+                                  <div class="position-absolute ps-6 mt-8">
+                                    <h5 class="mb-0">
+                                      Don't miss this
+                                      <br />
+                                      offer today.
+                                    </h5>
+                                    <a href="#" class="btn btn-primary btn-sm mt-3"
+                                      >Shop Now</a
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                            </div>
+                      
+                    
+                      </li>
+                    </ul>
+                    <!-- Left links -->
+                  </div>
+                  <!-- Collapsible wrapper -->
+    
+                <!-- Container wrapper -->
+              </nav>
+          
+      
+
               <li *ngFor="let item of CategoriesList$ | async" class="nav-item">
                 <a
                   routerLink="categories/{{ item.id }}"
@@ -81,9 +188,7 @@
                   >{{ item.name }}</a
                 >
               </li>
+              
             </ul>
           </div>
-        </div>
-      </div>
-    </nav>
-  </div>
+         

@@ -33,13 +33,6 @@ export class HomeComponent {
 
  
 
-  readonly GetToKnowUs$: Observable<string[]> = of([
-    'Company',
-    'About',
-    'Blog',
-    'Help Center',
-    'Our Value',
-  ]);
   readonly productsList$: Observable<ProductModel[]> =
     this._productsService.getAll();
 

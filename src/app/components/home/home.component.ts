@@ -53,7 +53,7 @@ export class HomeComponent {
         map((products) =>
           products
             .filter((products) => products.categoryId === categoryId)
-            .sort((a, b) => b.featureValues - a.featureValues)
+            .sort((a, b) => b.featureValue - a.featureValue)
             .slice(0, 5)
         )
       )
@@ -73,7 +73,7 @@ export class HomeComponent {
         map((products) =>
           products
             .filter((products) => products.categoryId === categoryId)
-            .sort((a, b) => b.featureValues - a.featureValues)
+            .sort((a, b) => b.featureValue - a.featureValue)
             .slice(0, 5)
         )
       )

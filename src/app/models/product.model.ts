@@ -1,11 +1,11 @@
 export interface ProductModel {
   readonly name: string;
-  readonly price: string;
+  readonly price: number;
   readonly categoryId: string;
-  readonly ratingValue: string;
-  readonly ratingCount: string;
+  readonly ratingValue: number;
+  readonly ratingCount: number;
   readonly imageUrl: string;
-  readonly featureValues: number;
+  readonly featureValue: number;
   readonly storeIds: string[];
   readonly id: string;
 }

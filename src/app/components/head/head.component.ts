@@ -17,13 +17,7 @@ export class HeadComponent {
   public Hamburger$: Observable<boolean> = this._hamburgerSubject.asObservable();
   readonly storesList$: Observable<StoreModel[]> = this._storesService.getAll();
 
-  readonly GetToKnowUs$: Observable<string[]> = of([
-    'Company',
-    'About',
-    'Blog',
-    'Help Center',
-    'Our Value',
-  ]);
+ 
 
   constructor(private _categoriesService: CategoriesService, private _storesService: StoresService) {
   }

@@ -36,9 +36,12 @@
             <div class="col-12"><h6 class="mb-4">Get to know us</h6></div>
           </div>
           <ul class="navbar-nav">
-            <li *ngFor="let item of GetToKnowUs$ | async" class="nav-item">
-              <a class="nav-link" [routerLink]="item" role="button">{{ item }}</a>
-            </li>
+           
+              <a class="nav-link" role="button">Company</a>
+              <a class="nav-link"  [routerLink]="'/about-us/'" role="button">About</a>
+              <a class="nav-link" role="button">Blog</a>
+              <a class="nav-link" role="button">Help Center</a>
+              <a class="nav-link" role="button">Our Value</a>
           </ul>
         </div>
       </div>

@@ -15,13 +15,7 @@ export class FooterComponent {
   readonly CategoriesList$: Observable<CategoryModel[]> = this._categoriesService.getAll();
   readonly storesList$: Observable<StoreModel[]> = this._storesService.getAll();
 
-  readonly GetToKnowUs$: Observable<string[]> = of([
-    'Company',
-    'About',
-    'Blog',
-    'Help Center',
-    'Our Value',
-  ]);
+
 
 
   constructor(private _categoriesService: CategoriesService, private _storesService: StoresService) {

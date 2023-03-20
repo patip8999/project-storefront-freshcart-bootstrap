@@ -24,8 +24,10 @@ export class HeadComponent {
     'Help Center',
     'Our Value',
   ]);
+
   constructor(private _categoriesService: CategoriesService, private _storesService: StoresService) {
   }
+
 
   ShowHamburger() {
     this.Hamburger$.pipe(take(1),

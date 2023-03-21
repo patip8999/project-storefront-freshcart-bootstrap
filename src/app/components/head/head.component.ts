@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { BehaviorSubject, Observable, of, take, tap } from 'rxjs';
+import { BehaviorSubject, Observable, of, shareReplay, take, tap } from 'rxjs';
 import { CategoryModel } from 'src/app/models/category.model';
 import { StoreModel } from 'src/app/models/store.model';
 import { CategoriesService } from 'src/app/services/categories.service';
@@ -23,16 +23,22 @@ export class HeadComponent {
   }
 
 
-  ShowHamburger() {
-    this.Hamburger$.pipe(take(1),
+  ShowHamburger(): void {
+    this.Hamburger$.pipe(
       tap(() => this._hamburgerSubject.next(true))
     ).subscribe()
   }
 
-  HideHamburger() {
-    this.Hamburger$.pipe(take(1),
+  HideHamburger(): void {
+    this.Hamburger$.pipe(
       tap(() => this._hamburgerSubject.next(false))
     ).subscribe()
   }
+
+
+
+
+
 }
+
 

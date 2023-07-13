@@ -6,17 +6,21 @@ import { StoreComponent } from './components/store/store.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { HomeTwoComponent } from './components/home-two/home-two.component';
 import { HomeThreeComponent } from './components/home-three/home-three.component';
+import { StoreListComponent } from './components/store-list/store-list.component';
+import { StoreGridComponent } from './components/store-grid/store-grid.component';
 import { HomeComponentModule } from './components/home/home.component-module';
 import { CategoriesComponentModule } from './components/categories/categories.component-module';
 import { StoreComponentModule } from './components/store/store.component-module';
 import { AboutUsComponentModule } from './components/about-us/about-us.component-module';
 import { HomeTwoComponentModule } from './components/home-two/home-two.component-module';
 import { HomeThreeComponentModule } from './components/home-three/home-three.component-module';
+import { StoreListComponentModule } from './components/store-list/store-list.component-module';
+import { StoreGridComponentModule } from './components/store-grid/store-grid.component-module';
 
-const routes: Routes = [{ path: '', component: HomeComponent }, { path: 'categories/:categoryId', component: CategoriesComponent }, { path: 'stores/:storeId', component: StoreComponent }, { path: 'about-us', component: AboutUsComponent }, { path: 'homeTwo', component: HomeTwoComponent }, { path: 'homeThree', component: HomeThreeComponent }];
+const routes: Routes = [{ path: '', component: HomeComponent }, { path: 'categories/:categoryId', component: CategoriesComponent }, { path: 'stores/:storeId', component: StoreComponent }, { path: 'about-us', component: AboutUsComponent }, { path: 'homeTwo', component: HomeTwoComponent }, { path: 'homeThree', component: HomeThreeComponent }, { path: 'storeList', component: StoreListComponent }, { path: 'storeGrid', component: StoreGridComponent }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), HomeComponentModule, CategoriesComponentModule, StoreComponentModule, AboutUsComponentModule, HomeTwoComponentModule, HomeThreeComponentModule],
+  imports: [RouterModule.forRoot(routes), HomeComponentModule, CategoriesComponentModule, StoreComponentModule, AboutUsComponentModule, HomeTwoComponentModule, HomeThreeComponentModule, StoreListComponentModule, StoreGridComponentModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

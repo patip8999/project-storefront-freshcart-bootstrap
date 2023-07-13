@@ -31,6 +31,7 @@ export class HomeComponent {
   map(([stores, tags]) => this.mapTagStore(tags, stores)));
  
 
+
  
 
   readonly productsList$: Observable<ProductModel[]> =
@@ -72,12 +73,16 @@ export class HomeComponent {
       )
     )
   );
+  openAlert() {
+    alert('Witaj w mojej aplikacji');
+  }
 
   constructor(
     private _categoriesService: CategoriesService,
     private _storesService: StoresService,
     private _productsService: ProductsService
   ) {}
+
 
 
   mapTagStore (
